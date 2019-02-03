@@ -1,0 +1,123 @@
+$base-color: #4dd965;
+$color-button: #4dd965;
+$color-card-background: #fbfbfb;
+$color-black: #030304;
+$color-main-background: #a4a4a4;
+$color-white: #ffffff;
+
+* {
+  // --color-button: #4dd965;
+  // --color-card-background: #fbfbfb;
+  // --color-text: #030304;
+  // --color-main-background: #a4a4a4;
+  // --color-white: #ffffff;
+
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+button,
+input[type='submit'],
+input[type='reset'] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-main-background;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  font-size: 1.5rem;
+  flex: 1;
+  // width: 30vw;
+  background-color: $color-card-background;
+  box-shadow: -0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.1), 0.5rem -1rem 1.5rem rgba(0, 0, 0, 0.1);
+  padding: 1rem 2.5rem;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.todoAddItem {
+  // width: 100%;
+  text-align: center;
+  display: flex;
+
+  &__input {
+    box-shadow: none;
+    border: 0;
+    border-bottom: 1.5px solid lighten($color-black, 85%);
+    outline: none;
+    background-color: inherit;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+  }
+  &__button {
+    width: 4rem;
+    color: $color-white;
+    background-color: $color-button;
+    border-radius: 50%;
+
+    height: 4rem;
+    margin-left: 2rem;
+    font-size: x-large;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      background-color: darken($color: $base-color, $amount: 20%);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    }
+
+    &:active {
+      box-shadow: 0rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.todoItems {
+  margin-top: 3rem;
+
+  & :not(:last-child) {
+    border-bottom: 1.5px solid lighten($color-black, 85%);
+    padding-bottom: 1rem;
+  }
+
+  &__item {
+    display: block;
+
+    &:not(:last-child) {
+      margin: 1rem 0;
+    }
+  }
+  &__checkbox {
+    margin-right: 1rem;
+  }
+
+  &__empty {
+    text-align: center;
+    margin: 3rem 0;
+    color: orangered;
+    font-size: 1.5rem;
+    flex: 1;
+  }
+}
