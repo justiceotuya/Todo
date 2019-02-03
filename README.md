@@ -2,8 +2,7 @@
 
 Todo app with react hook
 
-> > > > > > > 8f30e7f1f5c3ca10eeeec64fa2022ec2ae7549c6
-> > > > > > > A rendition of [Todo List](https://dribbble.com/shots/5872997-Todo-List)
+A rendition of [Todo List](https://dribbble.com/shots/5872997-Todo-List) using the new react hook feature
 
 to run;
 
